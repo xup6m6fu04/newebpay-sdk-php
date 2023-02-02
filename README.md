@@ -4,6 +4,8 @@
 
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fxup6m6fu04%2Fnewebpay-sdk-php.svg?type=small)](https://app.fossa.com/projects/git%2Bgithub.com%2Fxup6m6fu04%2Fnewebpay-sdk-php?ref=badge_small)
 [![StyleCI](https://github.styleci.io/repos/596413768/shield?branch=master)](https://github.styleci.io/repos/596413768?branch=master)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 
 ## 重要
 
