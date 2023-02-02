@@ -3,6 +3,7 @@
 > Fork from [ycs77/laravel-newebpay](https://github.com/ycs77/laravel-newebpay)
 
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fxup6m6fu04%2Fnewebpay-sdk-php.svg?type=small)](https://app.fossa.com/projects/git%2Bgithub.com%2Fxup6m6fu04%2Fnewebpay-sdk-php?ref=badge_small)
+[![StyleCI](https://github.styleci.io/repos/596413768/shield?branch=master)](https://github.styleci.io/repos/596413768?branch=master)
 
 ## 重要
 
