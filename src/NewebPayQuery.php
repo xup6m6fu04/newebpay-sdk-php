@@ -37,13 +37,13 @@ class NewebPayQuery extends BaseNewebPay
         $CheckValue = $this->queryCheckValue($this->CheckValues, $this->HashKey, $this->HashIV);
 
         return [
-            'MerchantID' => $this->MerchantID,
-            'Version' => $this->configs['Version'],
-            'RespondType' =>$this->configs['RespondType'],
-            'CheckValue' => $CheckValue,
-            'TimeStamp' => $this->timestamp,
+            'MerchantID'      => $this->MerchantID,
+            'Version'         => $this->configs['Version'],
+            'RespondType'     => $this->configs['RespondType'],
+            'CheckValue'      => $CheckValue,
+            'TimeStamp'       => $this->timestamp,
             'MerchantOrderNo' => $this->CheckValues['MerchantOrderNo'],
-            'Amt' => $this->CheckValues['Amt'],
+            'Amt'             => $this->CheckValues['Amt'],
         ];
     }
 }

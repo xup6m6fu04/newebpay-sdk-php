@@ -4,9 +4,6 @@ namespace Xup6m6fu04\NewebPay\Tests;
 
 use GuzzleHttp\Psr7\Response;
 use Xup6m6fu04\NewebPay\NewebPay;
-use Xup6m6fu04\NewebPay\NewebPayClose;
-use Xup6m6fu04\NewebPay\NewebPayMPG;
-use Xup6m6fu04\NewebPay\Sender\Sync;
 
 class NewebPayTest extends TestCase
 {
@@ -36,9 +33,9 @@ class NewebPayTest extends TestCase
             ->submit();
 
         $this->assertEquals([
-            'Status' => 'Code001',
+            'Status'  => 'Code001',
             'Message' => 'Test message.',
-            'Result' => [],
+            'Result'  => [],
         ], $result);
     }
 
@@ -56,9 +53,9 @@ class NewebPayTest extends TestCase
             ->submit();
 
         $this->assertEquals([
-            'Status' => 'Code001',
+            'Status'  => 'Code001',
             'Message' => 'Test message.',
-            'Result' => [],
+            'Result'  => [],
         ], $result);
     }
 
@@ -76,9 +73,9 @@ class NewebPayTest extends TestCase
             ->submit();
 
         $this->assertEquals([
-            'Status' => 'Code001',
+            'Status'  => 'Code001',
             'Message' => 'Test message.',
-            'Result' => [],
+            'Result'  => [],
         ], $result);
     }
 
@@ -96,9 +93,9 @@ class NewebPayTest extends TestCase
             ->submit();
 
         $this->assertEquals([
-            'Status' => 'Code001',
+            'Status'  => 'Code001',
             'Message' => 'Test message.',
-            'Result' => [],
+            'Result'  => [],
         ], $result);
     }
 
@@ -116,9 +113,9 @@ class NewebPayTest extends TestCase
             ->submit();
 
         $this->assertEquals([
-            'Status' => 'Code001',
+            'Status'  => 'Code001',
             'Message' => 'Test message.',
-            'Result' => [],
+            'Result'  => [],
         ], $result);
     }
 }

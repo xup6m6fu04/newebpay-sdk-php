@@ -6,9 +6,9 @@ use Carbon\Carbon;
 
 abstract class BaseNewebPay
 {
-    use Traits\Encryption,
-        Traits\HasSender,
-        Traits\Trade;
+    use Traits\Encryption;
+    use Traits\HasSender;
+    use Traits\Trade;
 
     /**
      * The neweb-pay Config.
@@ -96,7 +96,7 @@ abstract class BaseNewebPay
     /**
      * Generate the newebpay full URL.
      *
-     * @param  string  $path
+     * @param string $path
      *
      * @return string
      */
@@ -119,7 +119,7 @@ abstract class BaseNewebPay
     /**
      * Set the newebpay API path.
      *
-     * @param  string  $path
+     * @param string $path
      *
      * @return $this
      */

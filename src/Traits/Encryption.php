@@ -7,9 +7,9 @@ trait Encryption
     /**
      * Encrypt data with AES.
      *
-     * @param  array   $parameter
-     * @param  string  $hashKey
-     * @param  string  $hashIV
+     * @param array  $parameter
+     * @param string $hashKey
+     * @param string $hashIV
      *
      * @return string
      */
@@ -23,9 +23,9 @@ trait Encryption
     /**
      * Decrypt data with AES.
      *
-     * @param  string  $parameter
-     * @param  string  $hashKey
-     * @param  string  $hashIV
+     * @param string $parameter
+     * @param string $hashKey
+     * @param string $hashIV
      *
      * @return string|false
      */
@@ -37,9 +37,9 @@ trait Encryption
     /**
      * Encrypt data with SHA.
      *
-     * @param  string  $parameter
-     * @param  string  $hashKey
-     * @param  string  $hashIV
+     * @param string $parameter
+     * @param string $hashKey
+     * @param string $hashIV
      *
      * @return string
      */
@@ -53,9 +53,9 @@ trait Encryption
     /**
      * Query check value.
      *
-     * @param  array   $parameter
-     * @param  string  $hashKey
-     * @param  string  $hashIV
+     * @param array  $parameter
+     * @param string $hashKey
+     * @param string $hashIV
      *
      * @return string
      */
@@ -71,8 +71,8 @@ trait Encryption
     /**
      * Add padding.
      *
-     * @param  string  $string
-     * @param  int     $blocksize
+     * @param string $string
+     * @param int    $blocksize
      *
      * @return string
      */
@@ -88,7 +88,7 @@ trait Encryption
     /**
      * Strip padding.
      *
-     * @param  string  $string
+     * @param string $string
      *
      * @return string|false
      */

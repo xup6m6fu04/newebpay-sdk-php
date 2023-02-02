@@ -36,9 +36,9 @@ trait Trade
     }
 
     /**
-     * 串接版本
+     * 串接版本.
      *
-     * @param  string|null  $version
+     * @param string|null $version
      *
      * @return $this
      */
@@ -50,11 +50,11 @@ trait Trade
     }
 
     /**
-     * 回傳格式
+     * 回傳格式.
      *
      * Support types: "JSON", "String"
      *
-     * @param  string|null  $type
+     * @param string|null $type
      *
      * @return $this
      */
@@ -66,11 +66,11 @@ trait Trade
     }
 
     /**
-     * 語系
+     * 語系.
      *
      * Support types: "zh-tw", "en"
      *
-     * @param  string|null  $lang
+     * @param string|null $lang
      *
      * @return $this
      */
@@ -82,13 +82,13 @@ trait Trade
     }
 
     /**
-     * 交易秒數限制
+     * 交易秒數限制.
      *
      * 0: 不限制
      * 秒數下限為 60 秒，當秒數介於 1~59 秒時，會以 60 秒計算。
      * 秒數上限為 900 秒，當超過 900 秒時，會 以 900 秒計算。
      *
-     * @param  int|null  $limit
+     * @param int|null $limit
      *
      * @return $this
      */
@@ -100,9 +100,9 @@ trait Trade
     }
 
     /**
-     * 繳費有效期限
+     * 繳費有效期限.
      *
-     * @param  int|null  $day
+     * @param int|null $day
      *
      * @return $this
      */
@@ -116,11 +116,11 @@ trait Trade
     }
 
     /**
-     * 付款完成後導向頁面
+     * 付款完成後導向頁面.
      *
      * 僅接受 port 80 or 443
      *
-     * @param  string|null  $url
+     * @param string|null $url
      *
      * @return $this
      */
@@ -132,12 +132,12 @@ trait Trade
     }
 
     /**
-     * 付款完成後的通知連結
+     * 付款完成後的通知連結.
      *
      * 以幕後方式回傳給商店相關支付結果資料
      * 僅接受 port 80 or 443
      *
-     * @param  string|null  $url
+     * @param string|null $url
      *
      * @return $this
      */
@@ -153,7 +153,7 @@ trait Trade
      *
      * 此參數若為空值，則會顯示取號結果在藍新金流頁面。
      *
-     * @param  string|null  $url
+     * @param string|null $url
      *
      * @return $this
      */
@@ -169,7 +169,7 @@ trait Trade
      *
      * 當交易取消時，平台會出現返回鈕，使消費者依以此參數網址返回商店指定的頁面
      *
-     * @param  string|null  $url
+     * @param string|null $url
      *
      * @return $this
      */
@@ -181,9 +181,9 @@ trait Trade
     }
 
     /**
-     * 付款人電子信箱是否開放修改
+     * 付款人電子信箱是否開放修改.
      *
-     * @param  bool|null  $isModify
+     * @param bool|null $isModify
      *
      * @return $this
      */
@@ -197,7 +197,7 @@ trait Trade
     /**
      * 是否需要登入藍新金流會員
      *
-     * @param  bool|null  $isLogin
+     * @param bool|null $isLogin
      *
      * @return $this
      */
@@ -209,12 +209,12 @@ trait Trade
     }
 
     /**
-     * 商店備註
+     * 商店備註.
      *
      * 1.限制長度為 300 字。
      * 2.若有提供此參數，將會於 MPG 頁面呈現商店備註內容。
      *
-     * @param  string|null  $comment
+     * @param string|null $comment
      *
      * @return $this
      */
@@ -226,9 +226,9 @@ trait Trade
     }
 
     /**
-     * 支付方式
+     * 支付方式.
      *
-     * @param  array  $paymentMethod
+     * @param array $paymentMethod
      *
      * @return $this
      */
@@ -258,14 +258,14 @@ trait Trade
     }
 
     /**
-     * 付款方式-物流啟用
+     * 付款方式-物流啟用.
      *
      * 1 = 啟用超商取貨不付款
      * 2 = 啟用超商取貨付款
      * 3 = 啟用超商取貨不付款及超商取貨付款
      * null = 不開啟
      *
-     * @param  int|null  $cvscom
+     * @param int|null $cvscom
      *
      * @return $this
      */
@@ -277,7 +277,7 @@ trait Trade
     }
 
     /**
-     * 物流型態
+     * 物流型態.
      *
      * B2C = 超商大宗寄倉(目前僅支援統㇐超商)
      * C2C = 超商店到店(目前僅支援全家)
@@ -288,7 +288,7 @@ trait Trade
      *   b.若商店設定中未啟用［B2C 大宗寄倉］，則系統將會啟用［C2C 店到店］。
      *   c.若商店設定中，［B2C 大宗寄倉］與［C2C 店到店］皆未啟用，則支付頁面中將不會出現物流選項。
      *
-     * @param  string|null  $lgsType
+     * @param string|null $lgsType
      *
      * @return $this
      */
@@ -302,7 +302,7 @@ trait Trade
     /**
      * Set TokenTerm.
      *
-     * @param  string  $token
+     * @param string $token
      *
      * @return $this
      */
@@ -316,10 +316,10 @@ trait Trade
     /**
      * Set Order.
      *
-     * @param  string  $no
-     * @param  int     $amt
-     * @param  string  $desc
-     * @param  string  $email
+     * @param string $no
+     * @param int    $amt
+     * @param string $desc
+     * @param string $email
      *
      * @return $this
      */
