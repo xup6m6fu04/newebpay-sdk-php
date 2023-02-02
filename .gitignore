@@ -1,0 +1,10 @@
+.idea
+.phpunit.result.cache
+example
+composer.lock
+/vendor
+.DS_Store
+/.vscode
+/build/coverage-report
+phpunit.xml
+*.cache

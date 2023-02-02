@@ -1,0 +1,36 @@
+{
+    "name": "xup6m6fu04/newebpay-sdk-php",
+    "description": "A library of connecting newebpay API service.",
+    "type": "library",
+    "authors": [
+        {
+            "name": "xup6m6fu04",
+            "email": "sarah82529@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.2.5 || ^8.0",
+        "guzzlehttp/guzzle": "^7.5",
+        "nesbot/carbon": "^2.66",
+        "ext-openssl": "*",
+        "ext-json": "*",
+        "monolog/monolog": "^3.2"
+    },
+    "require-dev": {
+        "phpunit/phpunit": ">=8"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Xup6m6fu04\\NewebPay\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Xup6m6fu04\\NewebPay\\Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "platform-check": false
+    }
+}
