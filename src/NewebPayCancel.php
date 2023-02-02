@@ -18,13 +18,13 @@ class NewebPayCancel extends BaseNewebPay
     }
 
     /**
-     * 設定取消授權的模式
+     * 設定取消授權的模式.
      *
-     * @param  string  $no
-     * @param  int     $amt
-     * @param  string  $type
-     *                        'order': 使用商店訂單編號
-     *                        'trade': 使用藍新金流交易序號
+     * @param string $no
+     * @param int    $amt
+     * @param string $type
+     *                     'order': 使用商店訂單編號
+     *                     'trade': 使用藍新金流交易序號
      *
      * @return $this
      */
@@ -61,7 +61,7 @@ class NewebPayCancel extends BaseNewebPay
 
         return [
             'MerchantID_' => $this->MerchantID,
-            'PostData_' => $postData,
+            'PostData_'   => $postData,
         ];
     }
 }

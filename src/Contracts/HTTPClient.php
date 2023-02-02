@@ -9,7 +9,8 @@ interface HTTPClient
     /**
      * Set mock http client instance.
      *
-     * @param  Client  $client
+     * @param Client $client
+     *
      * @return mixed
      */
     public function setHttp(Client $client);

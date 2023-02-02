@@ -22,7 +22,7 @@ trait HasSender
     /**
      * Set the sender instance.
      *
-     * @param  HTTPSender  $sender
+     * @param HTTPSender $sender
      *
      * @return $this
      */
@@ -77,7 +77,7 @@ trait HasSender
     public function setMockHttp($mockResponse)
     {
         if ($this->sender instanceof HTTPClient) {
-            if (! $mockResponse instanceof MockHandler) {
+            if (!$mockResponse instanceof MockHandler) {
                 $mockHandler = new MockHandler($mockResponse);
             }
 
@@ -90,7 +90,7 @@ trait HasSender
     /**
      * Create http instance.
      *
-     * @param  MockHandler|null  $mockHttpHandler
+     * @param MockHandler|null $mockHttpHandler
      *
      * @return Client
      */

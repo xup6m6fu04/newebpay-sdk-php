@@ -19,7 +19,7 @@ class Async implements HTTPSender, HTTPClient
     /**
      * Create a new async instance.
      *
-     * @param  Client  $client
+     * @param Client $client
      *
      * @return void
      */
@@ -31,17 +31,18 @@ class Async implements HTTPSender, HTTPClient
     /**
      * Send the data to API.
      *
-     * @param  array   $request
-     * @param  string  $url
+     * @param array  $request
+     * @param string $url
+     *
+     * @throws GuzzleException
      *
      * @return mixed
-     * @throws GuzzleException
      */
     public function send(array $request, string $url)
     {
         $parameter = [
             'form_params' => $request,
-            'verify' => false,
+            'verify'      => false,
         ];
 
         return json_decode($this->http->post($url, $parameter)->getBody(), true);
@@ -50,7 +51,7 @@ class Async implements HTTPSender, HTTPClient
     /**
      * Set mock http client instance.
      *
-     * @param  Client  $client
+     * @param Client $client
      *
      * @return $this
      */

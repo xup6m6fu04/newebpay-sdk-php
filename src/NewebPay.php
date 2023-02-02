@@ -7,12 +7,12 @@ use Exception;
 class NewebPay extends BaseNewebPay
 {
     /**
-     * 付款
+     * 付款.
      *
-     * @param  string  $no     訂單編號
-     * @param  int     $amt    訂單金額
-     * @param  string  $desc   商品描述
-     * @param  string  $email  連絡信箱
+     * @param string $no    訂單編號
+     * @param int    $amt   訂單金額
+     * @param string $desc  商品描述
+     * @param string $email 連絡信箱
      *
      * @return NewebPayMPG
      */
@@ -20,17 +20,18 @@ class NewebPay extends BaseNewebPay
     {
         $newebPay = new NewebPayMPG($this->configs);
         $newebPay->setOrder($no, $amt, $desc, $email);
+
         return $newebPay;
     }
 
     /**
-     * 取消授權
+     * 取消授權.
      *
-     * @param  string  $no    訂單編號
-     * @param  int     $amt   訂單金額
-     * @param  string  $type  編號類型
-     *                        'order' => 使用商店訂單編號追蹤
-     *                        'trade' => 使用藍新金流交易序號追蹤
+     * @param string $no   訂單編號
+     * @param int    $amt  訂單金額
+     * @param string $type 編號類型
+     *                     'order' => 使用商店訂單編號追蹤
+     *                     'trade' => 使用藍新金流交易序號追蹤
      *
      * @return NewebPayCancel
      */
@@ -41,17 +42,18 @@ class NewebPay extends BaseNewebPay
     ): NewebPayCancel {
         $newebPay = new NewebPayCancel($this->configs);
         $newebPay->setCancelOrder($no, $amt, $type);
+
         return $newebPay;
     }
 
     /**
-     * 信用卡請款
+     * 信用卡請款.
      *
-     * @param  string  $no    訂單編號
-     * @param  int     $amt   訂單金額
-     * @param  string  $type  編號類型
-     *                        'order' => 使用商店訂單編號追蹤
-     *                        'trade' => 使用藍新金流交易序號追蹤
+     * @param string $no   訂單編號
+     * @param int    $amt  訂單金額
+     * @param string $type 編號類型
+     *                     'order' => 使用商店訂單編號追蹤
+     *                     'trade' => 使用藍新金流交易序號追蹤
      *
      * @return NewebPayClose
      */
@@ -63,17 +65,18 @@ class NewebPay extends BaseNewebPay
         $newebPay = new NewebPayClose($this->configs);
         $newebPay->setCloseOrder($no, $amt, $type);
         $newebPay->setCloseType('pay');
+
         return $newebPay;
     }
 
     /**
-     * 信用卡取消請款
+     * 信用卡取消請款.
      *
-     * @param  string  $no    訂單編號
-     * @param  int     $amt   訂單金額
-     * @param  string  $type  編號類型
-     *                        'order' => 使用商店訂單編號追蹤
-     *                        'trade' => 使用藍新金流交易序號追蹤
+     * @param string $no   訂單編號
+     * @param int    $amt  訂單金額
+     * @param string $type 編號類型
+     *                     'order' => 使用商店訂單編號追蹤
+     *                     'trade' => 使用藍新金流交易序號追蹤
      *
      * @return NewebPayClose
      */
@@ -86,17 +89,18 @@ class NewebPay extends BaseNewebPay
         $newebPay->setCloseOrder($no, $amt, $type);
         $newebPay->setCloseType('pay');
         $newebPay->setCancel(true);
+
         return $newebPay;
     }
 
     /**
-     * 信用卡退款
+     * 信用卡退款.
      *
-     * @param  string  $no    訂單編號
-     * @param  int     $amt   訂單金額
-     * @param  string  $type  編號類型
-     *                        'order' => 使用商店訂單編號追蹤
-     *                        'trade' => 使用藍新金流交易序號追蹤
+     * @param string $no   訂單編號
+     * @param int    $amt  訂單金額
+     * @param string $type 編號類型
+     *                     'order' => 使用商店訂單編號追蹤
+     *                     'trade' => 使用藍新金流交易序號追蹤
      *
      * @return NewebPayClose
      */
@@ -108,17 +112,18 @@ class NewebPay extends BaseNewebPay
         $newebPay = new NewebPayClose($this->configs);
         $newebPay->setCloseOrder($no, $amt, $type);
         $newebPay->setCloseType('refund');
+
         return $newebPay;
     }
 
     /**
-     * 信用卡取消退款
+     * 信用卡取消退款.
      *
-     * @param  string  $no    訂單編號
-     * @param  int     $amt   訂單金額
-     * @param  string  $type  編號類型
-     *                        'order' => 使用商店訂單編號追蹤
-     *                        'trade' => 使用藍新金流交易序號追蹤
+     * @param string $no   訂單編號
+     * @param int    $amt  訂單金額
+     * @param string $type 編號類型
+     *                     'order' => 使用商店訂單編號追蹤
+     *                     'trade' => 使用藍新金流交易序號追蹤
      *
      * @return NewebPayClose
      */
@@ -131,14 +136,15 @@ class NewebPay extends BaseNewebPay
         $newebPay->setCloseOrder($no, $amt, $type);
         $newebPay->setCloseType('refund');
         $newebPay->setCancel(true);
+
         return $newebPay;
     }
 
     /**
-     * 查詢
+     * 查詢.
      *
-     * @param  string  $no   訂單編號
-     * @param  int     $amt  訂單金額
+     * @param string $no  訂單編號
+     * @param int    $amt 訂單金額
      *
      * @return NewebPayQuery
      */
@@ -148,17 +154,18 @@ class NewebPay extends BaseNewebPay
     ): NewebPayQuery {
         $newebPay = new NewebPayQuery($this->configs);
         $newebPay->setQuery($no, $amt);
+
         return $newebPay;
     }
 
     /**
-     * 解碼加密字串
+     * 解碼加密字串.
      *
-     * @param  string  $encryptString
-     *
-     * @return mixed
+     * @param string $encryptString
      *
      * @throws Exception
+     *
+     * @return mixed
      */
     public function decode(string $encryptString)
     {
@@ -168,6 +175,7 @@ class NewebPay extends BaseNewebPay
                 $this->HashKey,
                 $this->HashIV
             );
+
             return json_decode($decryptString, true);
         } catch (Exception $e) {
             throw new Exception($e, $encryptString);
@@ -175,16 +183,17 @@ class NewebPay extends BaseNewebPay
     }
 
     /**
-     * 從 request 取得解碼加密字串
-     *
-     * @return mixed
+     * 從 request 取得解碼加密字串.
      *
      * @throws Exception
+     *
+     * @return mixed
      */
     public function decodeFromRequest($post)
     {
         $tradeInfo = $this->decode($post['TradeInfo']);
         $post['TradeInfo'] = $tradeInfo;
+
         return $post;
     }
 }

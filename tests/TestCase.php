@@ -27,7 +27,6 @@ class TestCase extends BaseTestCase
     /**
      * @param $key
      * @param $returnValue
-     *
      */
     public function mockSetConfig($key, $returnValue)
     {
@@ -54,23 +53,23 @@ class TestCase extends BaseTestCase
         $this->mockSetConfig('OrderComment', null);
         $this->mockSetConfig('PaymentMethod', [
             'CREDIT' => [
-                'Enable' => true,
+                'Enable'    => true,
                 'CreditRed' => false,
-                'InstFlag' => 0,
+                'InstFlag'  => 0,
             ],
             'ANDROIDPAY' => false,
             'SAMSUNGPAY' => false,
-            'LINEPAY' => false,
-            'UNIONPAY' => false,
-            'WEBATM' => false,
-            'VACC' => false,
-            'CVS' => false,
-            'BARCODE' => false,
+            'LINEPAY'    => false,
+            'UNIONPAY'   => false,
+            'WEBATM'     => false,
+            'VACC'       => false,
+            'CVS'        => false,
+            'BARCODE'    => false,
             'ESUNWALLET' => false,
-            'TAIWANPAY' => false,
-            'EZPAY' => false,
-            'EZPWECHAT' => false,
-            'EZPALIPAY' => false,
+            'TAIWANPAY'  => false,
+            'EZPAY'      => false,
+            'EZPWECHAT'  => false,
+            'EZPALIPAY'  => false,
         ]);
         $this->mockSetConfig('CVSCOM', null);
         $this->mockSetConfig('LgsType', null);

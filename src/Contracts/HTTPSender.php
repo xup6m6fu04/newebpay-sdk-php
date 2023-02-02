@@ -7,8 +7,8 @@ interface HTTPSender
     /**
      * Send the data to API.
      *
-     * @param  array   $request
-     * @param  string  $url
+     * @param array  $request
+     * @param string $url
      *
      * @return mixed
      */

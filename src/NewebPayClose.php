@@ -2,8 +2,6 @@
 
 namespace Xup6m6fu04\NewebPay;
 
-use Xup6m6fu04\NewebPay\NewebPayCancel;
-
 class NewebPayClose extends BaseNewebPay
 {
     /**
@@ -20,13 +18,13 @@ class NewebPayClose extends BaseNewebPay
     }
 
     /**
-     * 設定請退款的模式
+     * 設定請退款的模式.
      *
-     * @param  string  $no
-     * @param  int     $amt
-     * @param  string  $type
-     *                        'order': 使用商店訂單編號
-     *                        'trade': 使用藍新金流交易序號
+     * @param string $no
+     * @param int    $amt
+     * @param string $type
+     *                     'order': 使用商店訂單編號
+     *                     'trade': 使用藍新金流交易序號
      *
      * @return $this
      */
@@ -49,11 +47,11 @@ class NewebPayClose extends BaseNewebPay
     }
 
     /**
-     * 設定請款或退款
+     * 設定請款或退款.
      *
-     * @param  string  $type
-     *                        'pay': 請款
-     *                        'refund': 退款
+     * @param string $type
+     *                     'pay': 請款
+     *                     'refund': 退款
      *
      * @return $this
      */
@@ -90,7 +88,7 @@ class NewebPayClose extends BaseNewebPay
 
         return [
             'MerchantID_' => $this->MerchantID,
-            'PostData_' => $postData,
+            'PostData_'   => $postData,
         ];
     }
 }

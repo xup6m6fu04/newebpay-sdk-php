@@ -44,9 +44,9 @@ class NewebPayMPG extends BaseNewebPay
 
         return [
             'MerchantID' => $this->MerchantID,
-            'TradeInfo' => $tradeInfo,
-            'TradeSha' => $tradeSha,
-            'Version' => $this->TradeData['Version'],
+            'TradeInfo'  => $tradeInfo,
+            'TradeSha'   => $tradeSha,
+            'Version'    => $this->TradeData['Version'],
         ];
     }
 }

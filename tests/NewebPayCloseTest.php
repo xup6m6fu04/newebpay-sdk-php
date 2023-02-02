@@ -48,9 +48,9 @@ class NewebPayCloseTest extends TestCase
             ->submit();
 
         $this->assertEquals([
-            'Status' => 'Code001',
+            'Status'  => 'Code001',
             'Message' => 'Test message.',
-            'Result' => [],
+            'Result'  => [],
         ], $result);
     }
 }
