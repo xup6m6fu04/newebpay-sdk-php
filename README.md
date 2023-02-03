@@ -1,4 +1,4 @@
-# 藍星科技金流 API 專用 PHP SDK
+# 藍新科技金流 API 專用 PHP SDK
 
 > Fork from [ycs77/laravel-newebpay](https://github.com/ycs77/laravel-newebpay)
 
@@ -13,12 +13,12 @@ https://github.com/xup6m6fu04/newebpay-example
 
 調整項目
 - 不限制於 Laravel 中使用
-- 更新支援至藍星金流最新版本
+- 更新支援至藍新金流最新版本
 - 搭配猴子都能懂的完整詳細說明
 
-藍星金流官方文件：https://www.newebpay.com/website/Page/content/download_api
+藍新金流官方文件：https://www.newebpay.com/website/Page/content/download_api
 
-目前支援藍星金流 API 程式碼版本號：2.0
+目前支援藍新金流 API 程式碼版本號：2.0
 
 文件版本號：NDNF-1.0.6
 
