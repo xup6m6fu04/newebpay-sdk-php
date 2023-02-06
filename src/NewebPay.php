@@ -204,7 +204,7 @@ class NewebPay extends BaseNewebPay
      */
     public function decodeFromRequest($post)
     {
-        if ($this->verify($post['TradeInfo'], $post['TradeSha'])) {
+        if (!$this->verify($post['TradeInfo'], $post['TradeSha'])) {
             throw new Exception('TradeSha is not match');
         }
 
