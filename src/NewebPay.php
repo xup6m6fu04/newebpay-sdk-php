@@ -183,10 +183,10 @@ class NewebPay extends BaseNewebPay
     }
 
     /**
-     * 驗證來源
+     * 驗證來源.
      *
-     * @param  string  $trade
-     * @param          $sha
+     * @param string $trade
+     * @param        $sha
      *
      * @return bool
      */
