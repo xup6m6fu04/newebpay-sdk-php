@@ -183,6 +183,19 @@ class NewebPay extends BaseNewebPay
     }
 
     /**
+     * 驗證來源
+     *
+     * @param  string  $trade
+     * @param          $sha
+     *
+     * @return bool
+     */
+    public function verify(string $trade, $sha): bool
+    {
+        return $sha === $this->encryptDataBySHA($trade, $this->HashKey, $this->HashIV);
+    }
+
+    /**
      * 從 request 取得解碼加密字串.
      *
      * @throws Exception
@@ -191,6 +204,10 @@ class NewebPay extends BaseNewebPay
      */
     public function decodeFromRequest($post)
     {
+        if ($this->verify($post['TradeInfo'], $post['TradeSha'])) {
+            throw new Exception('TradeSha is not match');
+        }
+
         $tradeInfo = $this->decode($post['TradeInfo']);
         $post['TradeInfo'] = $tradeInfo;
 
